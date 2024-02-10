@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script
+    src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+    type="application/javascript"
+  ></script>
+  <script type="module">
+   const provider = new ethers.providers.Web3Provider(window.ethereum);
+   
+   const accounts = await provider.send("eth_requestAccounts", []);
+   
+   console.log(await provider.send("eth_Gasprice", []))
+
+   console.log(accounts)
+
+   const signer = provider.getSigner();
+
+   const transaction = {
+    to: "0x22F1B5c6175f64a7401d9197F558919940e09BD1",
+    value: ethers.utils.parseUnits("0.05","ether"),
+    gasprice: gasprice
+   }
+ 
+   // await signers.sendTransaction(transaction);
+
+
+   </script>
+</head>
+<body>
+<input placeholder="amount" type="text"/>
+<input placeholder="address" type="text"/>
+<button>submit</button>
+
+</body>
+</html>
