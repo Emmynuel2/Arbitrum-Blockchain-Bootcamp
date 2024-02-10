@@ -11,7 +11,7 @@
   <script type="module">
    const provider = new ethers.providers.Web3Provider(window.ethereum);
    
-   const accounts = await provider.send("eth_requestAccounts", []);
+   const accounts = await provider.send("eth_requestAccountS", []);
    
    console.log(await provider.send("eth_Gasprice", []))
 
