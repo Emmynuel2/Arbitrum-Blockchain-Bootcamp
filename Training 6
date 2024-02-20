@@ -3,21 +3,39 @@ pragma solidity ^0.8.19;
 
 contract Arithmetic {
     // Function to check if a number is odd
-    function is_odd(uint256 number) public pure returns (bool) {
-        return number % 2 != 0;
+
+    uint256 number =10;
+
+    function is_odd(uint256 num)  public pure  returns(bool) {
+       
+        if(num % 2 !=0) {
+            return true; //number is odd
+        }
+        else {
+            return false; // number is not odd
+        
+    }
+
+    
     }
 
     // Function to check if a number is even
-    function is_even(uint256 number) public pure returns (bool) {
-        return number % 2 == 0;
+    function is_even(uint256 num)  public pure  returns(bool) {
+       
+        if(num % 2 ==0) {
+            return true; //number is odd
+        }
+        else {
+            return false; // number is not odd
+        
     }
-
-    // Function to find the most significant bit of a number
-    function most_significant_bit(uint256 number) public pure returns (uint256) {
+}
+// Function to find the most significant bit of a number
+    function most_significant_bit(uint256 num) public pure returns (uint256) {
         uint256 msb = 0;
-        while (number > 0) {
-            msb = number;
-            number >>= 1;
+        while (num > 0) {
+            msb = num;
+            num >>= 1;
         }
         return msb;
     }
